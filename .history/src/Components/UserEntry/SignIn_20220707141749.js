@@ -2,7 +2,7 @@ import { Form, Button, Container, Row, Col } from 'react-bootstrap';
 import { useForm } from "react-hook-form";
 import { auth } from '../../firebase.init';
 import { useSignInWithEmailAndPassword, useSignInWithGoogle } from 'react-firebase-hooks/auth'
-import { Link, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import Loading from '../Loading/Loading';
 
 
@@ -90,7 +90,6 @@ const SignIn = () => {
                             </Button>
                         </Form>
                         <button onClick={() => signInWithGoogle()} className="btn btn-outline">Continue With Google</button>
-                        <Link to='/signUp'><p>You have don't account</p></Link>
                     </Col>
                     <Col lg={3}></Col>
                 </Row>
