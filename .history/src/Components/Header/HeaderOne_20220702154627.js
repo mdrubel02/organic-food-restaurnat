@@ -1,0 +1,25 @@
+import React from 'react';
+import './HeaderOne.css'
+import Container from 'react-bootstrap/Container';
+import { Navbar, Nav } from 'react-bootstrap';
+import logo from '../../Accets/restaurant logo.png'
+import { Link } from 'react-router-dom';
+
+const HeaderOne = () => {
+    return (
+        <Navbar className='one'>
+            <Container>
+                <Link to='/'>
+                    <img className='logo img' src={logo} alt="" />
+                </Link>
+                <Nav className="mx-auto">
+                    <Nav.Link href="#home">Home</Nav.Link>
+                    <Nav.Link href="#features">Features</Nav.Link>
+                    <Nav.Link href="#pricing">Pricing</Nav.Link>
+                </Nav>
+            </Container>
+        </Navbar>
+    );
+};
+
+export default HeaderOne;
